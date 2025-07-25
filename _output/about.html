@@ -165,7 +165,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#acerca-de-este-documento" id="toc-acerca-de-este-documento" class="nav-link active" data-scroll-target="#acerca-de-este-documento">Acerca de este documento</a>
   <ul class="collapse">
-  <li><a href="#ensayos-disponibles" id="toc-ensayos-disponibles" class="nav-link" data-scroll-target="#ensayos-disponibles">Ensayos disponibles</a></li>
+  <li><a href="#ensayos-disponibles" id="toc-ensayos-disponibles" class="nav-link" data-scroll-target="#ensayos-disponibles">Ensayos disponibles</a>
+  <ul class="collapse">
+  <li><a href="#ensayos-en-estaciones-experimentales" id="toc-ensayos-en-estaciones-experimentales" class="nav-link" data-scroll-target="#ensayos-en-estaciones-experimentales">🧪 Ensayos en estaciones experimentales</a></li>
+  <li><a href="#ensayos-en-campos-de-productores-ofe" id="toc-ensayos-en-campos-de-productores-ofe" class="nav-link" data-scroll-target="#ensayos-en-campos-de-productores-ofe">🚜 Ensayos en campos de productores (OFE)</a></li>
+  </ul></li>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#contacto" id="toc-contacto" class="nav-link" data-scroll-target="#contacto">Contacto</a></li>
   </ul></li>
@@ -196,25 +200,53 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="acerca-de-este-documento" class="level1">
 <h1>Acerca de este documento</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este material está en desarrollo.</p>
+</div>
+</div>
 <section id="ensayos-disponibles" class="level2">
 <h2 class="anchored" data-anchor-id="ensayos-disponibles">Ensayos disponibles</h2>
+<section id="ensayos-en-estaciones-experimentales" class="level3">
+<h3 class="anchored" data-anchor-id="ensayos-en-estaciones-experimentales">🧪 Ensayos en estaciones experimentales</h3>
 <ul>
-<li><p>🔬 <a href="./Trigo_DBCA.html">Ensayo con testigos apareados</a>:<br>
+<li><p>🔬 <a href="./Testigos_Apareados.html">Ensayo con testigos apareados</a>:<br>
 Evaluación del efecto de una práctica de manejo en ambientes contrastantes, utilizando modelos mixtos con y sin correlación espacial.</p></li>
-<li><p>🌾 <a href="ensayos/trigo-dbca.qmd">Ensayo de cultivares de trigo (DBCA)</a>:<br>
-Análisis de un ensayo de comparación de cultivares utilizando un diseño en bloques completos al azar, con ajuste de modelos mixtos.</p></li>
+<li><p>🌾 <a href="./Trigo_DBCA.html">Ensayo de cultivares de trigo (DBCA)</a>:<br>
+Comparación de cultivares de trigo bajo un diseño en bloques completos al azar, con ajuste de modelos mixtos y evaluación de estructuras espaciales de error.</p></li>
 </ul>
-<hr>
+</section>
+<section id="ensayos-en-campos-de-productores-ofe" class="level3">
+<h3 class="anchored" data-anchor-id="ensayos-en-campos-de-productores-ofe">🚜 Ensayos en campos de productores (OFE)</h3>
+<ul>
+<li><p>📈 <a href="./MLM_CorrEsp_OFE_Reg.html">OFE - Regresión</a>:<br>
+Evaluación del efecto de tratamientos fosforados en distintas zonas del lote. Se ajustan modelos mixtos con y sin correlación espacial, y se comparan las medias ajustadas por ambiente.</p></li>
+<li><p>🧭 <a href="./MLM_CorrEsp_OFE_Clasif.html">OFE - Clasificación</a>:<br>
+Análisis de la respuesta a distintas dosis de nitrógeno en cuatro zonas de manejo. Se ajustan modelos polinómicos y se predicen las dosis óptimas de N por zona, considerando la estructura espacial del error.</p></li>
+</ul>
+</section>
 </section>
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Brindar ejemplos reproducibles de análisis de ensayos que integren: - Estadística descriptiva - Modelos lineales mixtos - Modelización espacial - Comparaciones múltiples</p>
-<p>Todos los análisis fueron realizados con R y Quarto, fomentando la reproducibilidad y la comunicación de resultados.</p>
+<p>Brindar ejemplos reproducibles de análisis de ensayos que integren:</p>
+<ul>
+<li>Estadística descriptiva</li>
+<li>Modelos lineales mixtos</li>
+<li>Modelización espacial</li>
+</ul>
 <hr>
 </section>
 <section id="contacto" class="level2">
 <h2 class="anchored" data-anchor-id="contacto">Contacto</h2>
-<p>Para dudas o sugerencias, podés contactarme a través de <a href="https://www.linkedin.com">LinkedIn</a> o vía correo institucional.</p>
+<p>Para dudas o sugerencias, podés contactarnos a través de <a href="https://www.linkedin.com/in/ppaccioretti/">LinkedIn</a> o vía correo institucional.</p>
 
 
 </section>
