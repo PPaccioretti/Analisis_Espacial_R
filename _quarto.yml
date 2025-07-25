@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _output
+  output-dir: docs
   pre-render: prepare.R
   post-render: make_r_files.R
 
