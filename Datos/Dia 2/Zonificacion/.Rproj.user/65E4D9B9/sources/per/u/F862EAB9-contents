@@ -1,0 +1,75 @@
+library(sf)
+
+datos_cudos <- read.csv('../DepZonif/Cent.csv')
+
+datos_crudos_sf <- st_as_sf(datos_cudos,
+                            coords = c('xcoord', 'ycoord'),
+                            crs = 32720)
+mapview::mapview(datos_crudos_sf)
+st_write(datos_crudos_sf,
+         '../DepZonif/Centroides.gpkg')
+plot(datos_crudos_sf)
+datos_crudis <- st_read('../DepZonif/Sj_2015.csv')
+
+zonif <- st_read('datos/Clasification-2023-09-01.gpkg')
+
+
+plot(zonif[, c(1:5,10)],
+     pch = 2)
+
+
+plot(zonif$Alt,
+     zonif$Rto13)
+
+zonif_star <- stars::st_rasterize(zonif[, c(1:5,6)])
+
+plot(merge(zonif_star))
+
+
+sj <- st_read("datos/Lote 1/Lote_1_Sj.gpkg")
+hist(sj$Rinde_Sj)
+
+
+tg <- st_read("datos/Lote 1/Lote_1_Tg.gpkg")
+hist(tg$Rinde_Tg)
+plot(tg)
+tg_dep <- paar::depurate(tg)
+summary(tg_dep)
+
+sj <- st_read("datos/Lote 1/Lote_1_Sj.gpkg")
+hist(sj$Rinde_Sj)
+plot(sj)
+
+misRaster <- c("datos/Lote 1/Mapas/CE.tiff",
+  "datos/Lote 1/Mapas/MO.tiff",
+  "datos/Lote 1/Mapas/PS.tiff",
+  "datos/Lote 1/Mapas/Tg.tiff",
+  "datos/Lote 1/Mapas/Map-2023-09-06.tif") |> 
+  terra::rast()
+
+terra::plot(misRaster)
+
+library(stars)
+misPred <- st_as_stars(misRaster) |> st_as_sf()
+sf::st_write(misPred,
+             'datos/Lote 1/Mapas/Datos_multivariados_polygon.gpkg')
+
+miRasterPred <- sf::st_read('datos/Lote 1/Mapas/Datos_multivariados.gpkg')
+
+
+
+paar::kmspc(misPred,
+            c("CE", "MO", "PS", "Tg", "Map-2023-09-06"))
+
+
+
+datos_cudos <- read.table('datos/maiz.txt',
+                          header = TRUE)
+
+datos_crudos_sf <- st_as_sf(datos_cudos,
+                            coords = c('x', 'y'),
+                            crs = 32720)
+mapview::mapview(datos_crudos_sf)
+st_write(datos_crudos_sf,
+         'datos/maiz.gpkg')
+

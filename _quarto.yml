@@ -1,0 +1,16 @@
+project:
+  type: website
+  output-dir: _output
+  pre-render: prepare.R
+
+metadata-files:
+  - _website.yml
+
+format:
+  html:
+    theme:
+      - simplex
+      - brand
+    css: styles.css
+    toc: true
+    df-print: kable

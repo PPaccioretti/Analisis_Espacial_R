@@ -1,0 +1,11 @@
+library(sf)
+
+
+pol_Cba <- st_read('datos/pol_Cba.gpkg')
+
+
+datos <- st_read('datos/Lote 1/Mapas/Datos_multivariados.gpkg')
+datos
+plot(datos)
+
+

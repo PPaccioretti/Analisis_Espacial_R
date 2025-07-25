@@ -1,0 +1,77 @@
+---
+title: "Modelos Lineales Mixtos en R"
+subtitle: "Aplicaciones en datos con correlación espacial."
+author:
+  - name: Dr. Mariano Córdoba
+    email: marianoacba@agro.unc.edu.ar
+    affiliations:
+      - name: CONICET - FCA-UNC
+  - name: Dr. Pablo Paccioretti
+    email: pablopaccioretti@agro.unc.edu.ar
+    affiliations:
+      - name: 
+---
+
+::: {.callout-important}
+Este material está en desarrollo. 
+:::
+
+
+Este material presenta un conjunto de tutoriales prácticos enfocados en el
+análisis de datos de **ensayos agrícolas**, con énfasis en 
+**agricultura de precisión** y **experimentos en condiciones reales de producción** (*On-Farm Experiments*, OFE).
+
+Se abordan diferentes tipos de ensayos utilizando herramientas
+estadísticas modernas, integrando información espacial y ajustando
+modelos que consideran la estructura real de los datos.
+
+## Tipos de ensayos
+
+Los ensayos analizados corresponden a distintas configuraciones experimentales:
+
+- **Parcelas tradicionales:** diseño controlado con replicación y aleatorización.
+- **Ensayos OFE:** realizados directamente en el lote, con unidades experimentales más grandes y representativas.
+- **Franjas y testigos apareados:** estructuras más simples, comunes en contextos 
+productivos, que requieren modelos adecuados para su análisis.
+
+## Objetivos del análisis
+
+- Evaluar el efecto de prácticas de manejo como la fertilización 
+con fósforo (con y sin zinc) y el uso de diferentes dosis de nitrógeno.
+- Analizar la interacción entre tratamientos y zonas de manejo (*management zones*).
+- Determinar si es necesario aplicar un **manejo diferencial por ambiente**.
+- Ajustar modelos mixtos lineales, con y sin **correlación espacial**.
+- Estimar **medias ajustadas**, **comparaciones múltiples** y **dosis óptimas** por zona.
+
+## Herramientas utilizadas
+
+::: {.callout-tip}
+Los análisis se realizan en R, utilizando paquetes específicos:
+:::
+
+- `dplyr` para manipulación de datos
+- `sf` y `tmap` para análisis y visualización espacial
+- `nlme` para ajuste de modelos mixtos
+- `emmeans` y `multcomp` para estimación de medias y comparación de tratamientos
+- `ggplot2` para visualización de resultados
+
+## Estructura del tutorial
+
+El material está organizado en dos grandes secciones:
+
+1. Ensayos en estaciones experimentales
+  * [Ensayo con testigos apareados](Testigos_Apareados.qmd):  
+    Evaluación del efecto de una práctica de manejo en ambientes contrastantes, utilizando modelos 
+    mixtos con y sin correlación espacial.
+  * [Ensayo de cultivares de trigo (DBCA)](Trigo_DBCA.qmd):  
+    Análisis de un ensayo de comparación de cultivares utilizando un diseño en bloques completos
+    al azar, con ajuste de modelos mixtos.
+2. Ensayo en capos de productores - On-Farm experiments
+  * [OFE Regresión](MLM_CorrEsp_OFE_Reg.qmd):
+    Evaluación del efecto de tratamientos de fertilización fosforada en distintas zonas 
+    del lote. Se comparan tratamientos mediante modelos mixtos con y sin correlación 
+    espacial, y se visualizan las medias ajustadas por ambiente.
+  * [OFE Clasificación](MLM_CorrEsp_OFE_Clasif.qmd):
+    Evaluación de la respuesta del cultivo a cuatro dosis de nitrógeno en 
+    cuatro zonas de manejo. Se ajustan modelos polinómicos y se predicen las 
+    dosis óptimas de N por zona, considerando estructuras espaciales de error.

@@ -1,0 +1,23 @@
+website:
+  title: "MLM"
+  sidebar:
+    search: true
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Inicio
+      - text: "Parcelas experimentales"
+        menu:
+          - text: "Cultivares de trigo"
+            href: Trigo_DBCA.qmd
+          - text: "Testigos apareados"
+            href: Testigos_Apareados.qmd
+      - text: "OFE"
+        menu:
+          - text: Clasificación
+            href: MLM_CorrEsp_OFE_Clasif.qmd
+          - text: Regresión
+            href: MLM_CorrEsp_OFE_Reg.qmd
+      - text: Sobre
+        href: about.qmd

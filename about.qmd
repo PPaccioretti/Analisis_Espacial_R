@@ -1,0 +1,42 @@
+---
+title: "About"
+---
+
+# Acerca de este documento
+
+::: {.callout-important}
+Este material está en desarrollo. 
+:::
+
+
+## Ensayos disponibles
+
+### 🧪 Ensayos en estaciones experimentales
+
+- 🔬 [Ensayo con testigos apareados](Testigos_Apareados.qmd):  
+  Evaluación del efecto de una práctica de manejo en ambientes contrastantes, utilizando modelos mixtos con y sin correlación espacial.
+
+- 🌾 [Ensayo de cultivares de trigo (DBCA)](Trigo_DBCA.qmd):  
+  Comparación de cultivares de trigo bajo un diseño en bloques completos al azar, con ajuste de modelos mixtos y evaluación de estructuras espaciales de error.
+
+### 🚜 Ensayos en campos de productores (OFE)
+
+- 📈 [OFE - Regresión](MLM_CorrEsp_OFE_Reg.qmd):  
+  Evaluación del efecto de tratamientos fosforados en distintas zonas del lote. Se ajustan modelos mixtos con y sin correlación espacial, y se comparan las medias ajustadas por ambiente.
+
+- 🧭 [OFE - Clasificación](MLM_CorrEsp_OFE_Clasif.qmd):  
+  Análisis de la respuesta a distintas dosis de nitrógeno en cuatro zonas de manejo. Se ajustan modelos polinómicos y se predicen las dosis óptimas de N por zona, considerando la estructura espacial del error.
+
+## Objetivo
+
+Brindar ejemplos reproducibles de análisis de ensayos que integren:
+
+- Estadística descriptiva
+- Modelos lineales mixtos
+- Modelización espacial
+
+---
+
+## Contacto
+
+Para dudas o sugerencias, podés contactarnos a través de [LinkedIn](https://www.linkedin.com/in/ppaccioretti/) o vía correo institucional.
